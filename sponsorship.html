@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsorship Tiers - NASA Space Apps Albuquerque</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&family=Overpass:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Using variables for the placeholder colors */
+        :root {
+            /* Placeholder for Blue Near Black - adjust if official hex is provided */
+            --color-blue-near-black: #07173F; /* Using DEEP BLUE as a close dark color */
+            /* Placeholder for Slate Gray - adjust if official hex is provided */
+            --color-slate-gray: #4A4A4A; /* A common dark gray - Keeping variable but not using for body text now */
+             /* Placeholder for Medium Red - adjust if official hex is provided */
+            --color-medium-red: #CC0000; /* A placeholder medium red */
+        }
+
+        body {
+            /* Apply gradient background from style guide */
+            /* Angle is 135deg for top-left to bottom-right */
+            background: linear-gradient(135deg, #0042A6, #07173F); /* ELECTRIC BLUE to DEEP BLUE */
+            /* Default text color for body copy, set to White as per second screenshot */
+            color: #FFFFFF; /* White */
+            font-family: 'Overpass', sans-serif; /* Default body font */
+            line-height: 1.6; /* Standard line height, guide doesn't specify for body */
+            margin: 0;
+            padding: 20px;
+            font-size: 20px; /* Body copy size from guide (using px) */
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            /* Ensure container background allows text readability if needed */
+            /* Not setting a specific background here as body has the gradient */
+        }
+
+        h1 {
+            /* H1 Headline styles from guide and second screenshot */
+            font-family: 'Fira Sans', sans-serif; /* Use Fira Sans */
+            font-weight: 900; /* Black weight */
+            font-size: 60pt; /* Size */
+            line-height: 120%; /* Line height */
+            text-transform: uppercase; /* All-Caps */
+            letter-spacing: 0.05em; /* 5% Letter Spacing */
+            color: #FFFFFF; /* White as per second screenshot */
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        h2 {
+            /* H2 Headline styles from guide and second screenshot */
+            font-family: 'Overpass', sans-serif; /* Overpass Regular */
+            font-weight: 400; /* Regular weight */
+            font-size: 42pt; /* Size */
+            line-height: 120%; /* Line height */
+             /* Default color is White. Alternating colors are White and Neon Yellow. */
+            color: #FFFFFF; /* White as per second screenshot */
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
+
+        /* Styles for alternating H2 text colors */
+        .h2-neon-yellow {
+            color: #EAFE07; /* Neon Yellow */
+        }
+         .h2-white {
+            color: #FFFFFF; /* White */
+        }
+
+
+         h3 {
+            /* H3 Subheading styles from guide */
+            font-family: 'Overpass', sans-serif; /* Overpass SemiBold */
+            font-weight: 600; /* SemiBold weight */
+            font-size: 20pt; /* Size */
+            line-height: 150%; /* Line height */
+            text-transform: uppercase; /* All-Caps */
+            color: #EAFE07; /* Neon Yellow as requested */
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Apply body copy styles to paragraphs and list items */
+        p, .tier ul li {
+            font-family: 'Overpass', sans-serif; /* Overpass Regular/Light */
+            font-size: 20px; /* Consistent size with body */
+            line-height: 1.6; /* Using standard line height */
+             /* Inherits color from body (White) */
+             color: #FFFFFF; /* Explicitly set to White as per second screenshot for consistency */
+        }
+
+         /* Style for body text elements that might use Overpass Light */
+        .overpass-light {
+             font-family: 'Overpass', sans-serif;
+             font-weight: 300; /* Light weight */
+        }
+
+        .tier {
+            /* Backgrounds for text should be Deep Blue, Electric Blue, or White. */
+            /* The semi-transparent white is used here for the *container*, not directly behind text blocks as per strict guide.
+               If text readability becomes an issue, consider using one of the 3 approved backgrounds within the tier.
+               Keeping the current semi-transparent background for visual separation. */
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background for tiers */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* Text color inside tiers is now handled by the general body and paragraph styles (set to White) */
+        }
+
+         /* Ensure text elements inside tier inherit the white color */
+        .tier p, .tier ul li {
+             color: inherit; /* Inherit color from parent (.tier or body) */
+        }
+
+
+        .tier h3 {
+            margin-top: 0; /* Adjust margin for h3 inside tier */
+        }
+
+        .tier ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        .tier ul li {
+            margin-bottom: 8px;
+        }
+
+        .note {
+            font-style: italic;
+            margin-top: 20px;
+            padding: 15px;
+             /* Allowed background for highlighted note */
+            background-color: rgba(233, 248, 7, 0.1); /* Slightly transparent Neon Yellow background */
+            border-left: 4px solid #EAFE07; /* Neon Yellow border */
+            border-radius: 4px;
+            /* Ensure text in note is readable - use a dark color */
+            color: var(--color-blue-near-black); /* Use Blue Near Black for contrast */
+        }
+
+        /* Button styling from guide and screenshot */
+        .back-link { /* Using the existing class for the button */
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #EAFE07; /* Neon Yellow background */
+            color: var(--color-blue-near-black); /* Blue Near Black text */
+            text-decoration: none; /* Remove underline */
+            font-family: 'Overpass', sans-serif; /* Overpass Bold */
+            font-weight: 700; /* Bold weight */
+            font-size: 24px; /* Size */
+            border-radius: 5px; /* Standard border radius */
+            transition: background-color 0.3s ease;
+            /* Add a slight shadow for depth, optional */
+             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link:hover {
+            background-color: #FFFF00; /* Slightly brighter yellow on hover */
+             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Secondary Link styling from guide and screenshot */
+        .secondary-link {
+            font-family: 'Overpass', sans-serif;
+            font-weight: 700; /* Bold */
+            font-size: 24px; /* Size */
+            color: #0960E1; /* Neon Blue */
+            text-decoration: underline; /* Underline */
+            cursor: pointer; /* Indicate it's clickable */
+            transition: color 0.3s ease;
+        }
+
+        .secondary-link:hover {
+            color: #E43700; /* Rocket Red on hover as seen in screenshot */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sponsorship Opportunities</h1>
+
+        <h2>
+            <span class="h2-white">Unofficial Sponsor</span>
+            </h2>
+        <div class="tier">
+            <h3>🌱 Community Partner: $250</h3>
+            <p><span class="overpass-light">Supporter Tier</span> - For nonprofits, student clubs, and public organizations</p> <p>Be part of our local innovation ecosystem. As a Community Partner, your support helps spread the word and grow participation for NASA Space Apps in Albuquerque. Perfect for those who believe in grassroots creativity and community initiatives.</p>
+            <ul>
+                <li>Logo on official website</li>
+                <li>Social media shout-out</li>
+                <li>Name listed in “Community Partners” section (separate from main sponsors)</li>
+            </ul>
+        </div>
+
+        <h2>
+            <span class="h2-white">Official Sponsor Tiers</span>
+        </h2>
+
+        <div class="tier">
+             <h3>🚀 Launch: $1,000</h3>
+             <p>Venue Catalyst - Help us secure our launchpad</p>
+            <p>Make this mission possible. Your sponsorship helps cover the cost of our venue—literally creating the space where students, creators, and community members come together to solve real-world challenges using NASA data.</p>
+            <ul>
+                <li>Logo on website</li>
+                <li>Early supporter highlight on social media</li>
+                <li>Verbal thank-you during kickoff</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+             <h3>🛠️ Momentum: $1,400</h3>
+             <p>Support a team’s journey through outer space and back</p>
+            <p>Sponsor a team! Your donation will provide food and materials for teams to brainstorm, ideate, and implement their projects in a comfortable, creative environment. Their ideas could inspire the next big startup—or change lives right here in Albuquerque.</p>
+            <ul>
+                <li>Everything in Launch, PLUS;</li>
+                <li>Logo on a team’s round table</li>
+                <li>Logo included in event slideshow</li>
+                <li>Small logo on t-shirts given to all participants</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+             <h3>🧪 Orbit (Most Engaging): $1,500</h3>
+             <p>Challenge Zone Supporter - Interactive & high-impact</p>
+            <p>Equip the future of innovation. Your support outfits an entire workstation with the tools and supplies participants need to tackle challenge prompts—from hardware and data to whiteboards and creative materials. Plus, you’ll get the opportunity to host a hands-on workshop that connects your organization directly to the builders and problem-solvers of tomorrow.</p>
+            <ul>
+                <li>Everything in Momentum, PLUS:</li>
+                <li>Logo displayed at challenge-specific station</li>
+                <li>Opportunity to host a short workshop or demo (non-salesy, skill-based)</li>
+                <li>Medium logo on t-shirts given to all participants</li>
+                <li>Featured on large event signage</li>
+            </ul>
+        </div>
+
+        <div class="tier">
+             <h3>🌎 Impact (Presenting Sponsor): $5,000</h3>
+             <p>Premiere Partner - Top billing across the event</p>
+            <p>Put your name at the forefront of innovation. As Presenting Sponsor, you’ll be recognized as the visionary force behind 2025 NASA Space Apps, Albuquerque. This is more than a sponsorship—it’s a statement that your company champions community, creativity, and a brighter future.</p>
+                <li>Everything in Orbit tier, PLUS:</li>
+                <li>Exclusive top-billing on website, shirts, and banners</li>
+                <li>Logo on venue welcome signage</li>
+                <li>Quote or spotlight in press releases & recap content</li>
+                <li>Largest logo on all event materials</li>
+                <li>Optional judge or mentor role</li>
+                <li>Co-branded challenge or prize category</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
